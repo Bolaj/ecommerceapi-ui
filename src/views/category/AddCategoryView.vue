@@ -1,4 +1,5 @@
 <template>
+<AdminNavBar/>
     <div class="container">
         <div class="row">
             <div class="col-12 text-center"><h3>Add Category</h3></div>
@@ -19,7 +20,8 @@
                   <label for=""></label>
                   <input type="text" class="form-control" v-model="imageUrl" placeholder="Upload Image" aria-describedby="helpId">
                 </div>
-                <button type="button" class="btn btn-primary" @click="addCategory">Sumbit</button>
+
+                <button type="button" class="btn btn-primary btn-block" @click="addCategory">Sumbit</button>
             </form>
 
             </div>
@@ -29,9 +31,11 @@
     </div>
 </template>
 <script>
+import AdminNavBar from "@/components/Admin/AdminNavBar.vue";
 const axios = require("axios");
 const sweetalert = require("sweetalert");
 export default{
+    components:{AdminNavBar},
     
     data(){
         return{

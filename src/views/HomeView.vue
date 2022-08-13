@@ -1,17 +1,19 @@
 <template>
   <div class="home">
-    <div class="home">Home Page</div>
+    <MainBox/>
   </div>
 </template>
 
 <script>
+import MainBox from '@/components/MainBox.vue';
 // @ is an alias to /src
 
 
 export default {
-  name: 'HomeView',
-  components: {
-    
-  }
+    name: "HomeView",
+    components: { MainBox }
 }
 </script>
+<style>
+
+</style>
