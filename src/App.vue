@@ -1,7 +1,5 @@
 <template>
 
-<NavBar />
-  
 <router-view
     :baseURL="baseURL"
     :categories="categories"

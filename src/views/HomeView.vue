@@ -1,4 +1,5 @@
 <template>
+<NavBar/>
   <div class="home">
     <MainBox/>
   </div>
@@ -6,14 +7,15 @@
 
 <script>
 import MainBox from '@/components/MainBox.vue';
+import NavBar from '@/components/NavBar.vue';
 // @ is an alias to /src
 
 
 export default {
     name: "HomeView",
-    components: { MainBox }
+    components: { MainBox, NavBar }
 }
 </script>
 <style>
-
+ @import '../main.css';
 </style>
