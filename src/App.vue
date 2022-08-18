@@ -1,9 +1,11 @@
 <template>
 
 <router-view
+    v-if="products && categories"
     :baseURL="baseURL"
     :categories="categories"
     :products="products"
+    @fetchData="fetchData"
 
 ></router-view>
 </template>
@@ -17,8 +19,10 @@ export default{
     data(){
         return{
             baseURL: "http://localhost:8081",
-            products: [],
-            categories: []
+            products: null,
+            categories: null,
+            token: null,
+            key: 0
 
         }
     },
@@ -38,6 +42,7 @@ export default{
         }
     },
     mounted() {
+        this.token = localStorage.getItem('token');
         this.fetchData();
     },
 

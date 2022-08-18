@@ -25,19 +25,9 @@ import AdminNavBar from "@/components/Admin/AdminNavBar.vue";
 
 export default{
     name: "ViewCategory",
-    props: ["categories"],
+    props: ["baseURL","categories"],
     components: { CategoryBox, AdminNavBar },
-    data(){
-        return{
-            baseURL: "http://localhost:8081",
-           
-        };
-
-    },
-    methods:{
-        
-
-    },
+    
     mounted(){
        // this.getCategories();
     }

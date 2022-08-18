@@ -10,7 +10,7 @@
                 <form>
                 <div class="form-group">
                   <label for=""></label>
-                  <input type="text" class="form-control" v-model="categoryName" placeholder="Category Name">
+                  <input type="text" class="form-control" v-model="categoryName" placeholder="Category Name" required>
                 </div>
                 <div class="form-group">
                   <label for=""></label>
@@ -20,7 +20,7 @@
                   <label for=""></label>
                   <input type="text" class="form-control" v-model="imageUrl" placeholder="Upload Image" aria-describedby="helpId">
                 </div>
-
+                <br/>
                 <button type="button" class="btn btn-primary btn-block" @click="addCategory">Sumbit</button>
             </form>
 
