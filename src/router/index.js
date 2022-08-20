@@ -6,6 +6,7 @@ import EditCategory from '../views/category/EditCategory.vue'
 import AddProductView from '../views/product/AddProductView.vue'
 import ViewCategory from '../views/category/ViewCategory.vue'
 import ProductView from '../views/product/ProductView.vue'
+import EditProduct from '../views/product/EditProduct.vue'
 import AdminHome from '../views/admin/AdminHome.vue'
 import SignIn from '../views/SignIn.vue'
 
@@ -20,21 +21,11 @@ const routes = [
     name: 'about',
     component: AboutView
   },
+  //Category Routes
   {
     path:'/admin/category/add',
     name:'AddCategory',
     component: AddCategoryView
-  },
-  {
-    path:'/admin/category/update/:id',
-    name:'EditCategory',
-    component:EditCategory
-
-  },
-  {
-    path: '/admin/product/add',
-    name: 'AddProduct',
-    component: AddProductView
   },
   {
     path:'/admin/category',
@@ -42,9 +33,26 @@ const routes = [
     component: ViewCategory
   },
   {
+    path:'/admin/category/update/:id',
+    name:'EditCategory',
+    component:EditCategory
+
+  },
+  //Product Routes
+  {
+    path: '/admin/product/add',
+    name: 'AddProduct',
+    component: AddProductView
+  },
+  {
     path:'/admin/product',
     name:'Product',
     component: ProductView
+  },
+  {
+    path:'/admin/product/update/:id',
+    name:'EditProduct',
+    component: EditProduct
   },
   //admin home page
   {

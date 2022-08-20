@@ -1,8 +1,8 @@
 <template>
 <NavBar/>
-  <div class="home">
+  <div class="container">
     <MainBox/>
-      <div class="col-12 text-center">
+      <div class="container col-12 text-center">
         <h3>Top Categories</h3>
       </div>
       <div class="row">
@@ -11,7 +11,7 @@
         </div>    
       </div>
       
-      <div class="container col-12 text-center">
+      <div class="container col-12 text-center py-3">
         <h3>Top Products</h3>
       </div>
       <div class="row">
@@ -19,12 +19,16 @@
           <ProductBox :product="products[index-1]" />
         </div>    
       </div>
+
   </div>
+  <FooterBar/>
+
 </template>
 
 <script>
 import MainBox from '@/components/MainBox.vue';
 import NavBar from '@/components/NavBar.vue';
+import FooterBar from '@/components/FooterBar.vue';
 import ProductBox from '@/components/Product/ProductBox.vue';
 import CategoryBox from '@/components/Category/CategoryBox.vue';
 // @ is an alias to /src
@@ -32,7 +36,7 @@ import CategoryBox from '@/components/Category/CategoryBox.vue';
 
 export default {
     name: "HomeView",
-    components: { MainBox, CategoryBox, ProductBox, NavBar },
+    components: { MainBox, CategoryBox, ProductBox, NavBar, FooterBar },
     props:["categories","products"],
     data(){
       return{

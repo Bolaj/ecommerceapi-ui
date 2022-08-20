@@ -5,7 +5,8 @@
             <h5 class="card-title">{{ product.productName }}</h5>
             <p class="card-text">{{ product.description }}</p>
             <p class="card-text">N{{ product.price }}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <router-link id="edit-product" :to="{ name: 'EditProduct', params:{id: product.id} }" v-show="$route.name == 'Product'" class="btn btn-primary">Edit Product</router-link>
+
         </div>
 </div>
 </template>
